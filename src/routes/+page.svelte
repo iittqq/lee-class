@@ -54,7 +54,9 @@
 			to an amazing year!
 		</p>
 	</div>
-	<img src="/headshot1.jpeg" alt="headshot" class="headshot" />
+	<div class="image-container">
+		<img src="/headshot1.jpeg" alt="headshot" class="headshot" />
+	</div>
 </div>
 <div class="details-row-opposite">
 	<div class="details-row-text">
@@ -65,7 +67,9 @@
 			teaching and I look forward to watching each child learn and grow over the school year.
 		</p>
 	</div>
-	<img src="/group.JPG" alt="headshot" class="headshot" />
+	<div class="image-container">
+		<img src="/group.JPG" alt="headshot" class="headshot" />
+	</div>
 </div>
 <h3 class="section-header">Contact Me:</h3>
 <div class="contact-section">
@@ -102,7 +106,7 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-		width: 80vw;
+		width: 90vw;
 		padding: 1rem;
 		@media (max-width: 768px) {
 			flex-direction: column;
@@ -129,14 +133,21 @@
 			width: 90vw;
 		}
 	}
-	.headshot {
-		width: 30vw;
-		height: 350px;
+	.image-container {
+		height: 50vh;
+		width: 40vw;
+		overflow: hidden;
 		border-radius: 25px;
-		object-fit: cover;
 		@media (max-width: 768px) {
 			width: 90vw;
+			height: 300px;
 		}
+	}
+
+	.image-container img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 
 	.section-header {
