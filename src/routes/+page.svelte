@@ -94,6 +94,9 @@
 		}
 		p {
 			width: 50vw;
+			@media (max-width: 768px) {
+				width: 90vw;
+			}
 		}
 	}
 	.scroll-arrow {
@@ -110,7 +113,6 @@
 		padding: 1rem;
 		@media (max-width: 768px) {
 			flex-direction: column;
-			width: 90vw;
 		}
 	}
 	.details-row-opposite {
@@ -123,7 +125,6 @@
 		padding: 1rem;
 		@media (max-width: 768px) {
 			flex-direction: column;
-			width: 90vw;
 		}
 	}
 	.details-row-text {
@@ -155,6 +156,9 @@
 		text-align: center;
 		width: 50vw;
 		font-size: 1.5rem;
+		@media (max-width: 768px) {
+			width: 90vw;
+		}
 	}
 	.utility-row {
 		display: flex;
