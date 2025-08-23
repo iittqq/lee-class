@@ -127,7 +127,7 @@
 		}
 	}
 	.details-row-text {
-		width: 30vw;
+		width: 40vw;
 		text-align: center;
 		@media (max-width: 768px) {
 			width: 90vw;
