@@ -9,8 +9,7 @@ const config = {
 	preprocess: vitePreprocess(),
 	kit: { adapter: adapter({ fallback: 'index.html' }) },
 	paths: {
-		base: dev ? '' : '/lee-class', // <-- change to your repo name
-		relative: true // makes asset URLs work under subpaths
+		base: process.env.NODE_ENV === 'production' ? '/lee-class' : ''
 	}
 };
 
