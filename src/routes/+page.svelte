@@ -119,7 +119,7 @@
 		flex-direction: row-reverse;
 		justify-content: space-between;
 		align-items: center;
-		width: 80vw;
+		width: 90vw;
 		padding: 1rem;
 		@media (max-width: 768px) {
 			flex-direction: column;
