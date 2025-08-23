@@ -9,7 +9,7 @@ const config = {
 	preprocess: vitePreprocess(),
 	kit: { adapter: adapter({ fallback: 'index.html' }) },
 	paths: {
-		base: process.env.NODE_ENV === 'production' ? '/lee-class' : ''
+		base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
 	}
 };
 
