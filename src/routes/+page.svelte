@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.css';
+	import Footer from '$lib/components/Footer.svelte';
 	const utilities = [
 		{
 			name: "What We're Learning",
@@ -19,15 +20,15 @@
 		},
 
 		{
-			name: 'About the Teacher',
-			image: '/presentation.png',
-			route: '/about'
+			name: 'Resources',
+			image: '/resource.png',
+			route: '/resources'
 		}
 	];
 </script>
 
 <div class="home-header-container">
-	<h1>Welcome!</h1>
+	<h1>Welcome to Fifth Grade!</h1>
 	<p>
 		This website functions as a way for parents to keep up with their children's learning and gather
 		feedback for the betterment of the class. Here you'll find what the students are currently
@@ -71,14 +72,7 @@
 		<img src="/group.JPG" alt="headshot" class="headshot" />
 	</div>
 </div>
-<h3 class="section-header">Contact Me:</h3>
-<div class="contact-section">
-	<a href="https://www.parentsquare.com/">Parent Square</a>
-	<hr />
-	<a href="mailto:richard_lee@beaverton.k12.or.us">richard_lee@beaverton.k12.or.us</a>
-	<hr />
-	<a href="tel:+15033562110">(503) 356-2110</a>
-</div>
+<Footer />
 
 <style>
 	.home-header-container {
@@ -151,15 +145,6 @@
 		object-fit: cover;
 	}
 
-	.section-header {
-		margin: 2rem auto 2rem auto;
-		text-align: center;
-		width: 50vw;
-		font-size: 1.5rem;
-		@media (max-width: 768px) {
-			width: 90vw;
-		}
-	}
 	.utility-row {
 		display: flex;
 		flex-direction: row;
@@ -187,18 +172,5 @@
 	.utility-image {
 		width: 200px;
 		height: 200px;
-	}
-	.contact-section {
-		margin: auto;
-		width: auto;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		margin-bottom: 2rem;
-		a {
-			text-decoration: none;
-			color: #5b618a;
-		}
 	}
 </style>

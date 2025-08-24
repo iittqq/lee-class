@@ -1,10 +1,9 @@
-// svelte.config.js
-import vercel from '@sveltejs/adapter-vercel';
+import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
-export default {
+const config = {
 	preprocess: vitePreprocess(),
-	kit: {
-		adapter: vercel() // default serverless on Vercel
-	}
+	kit: { adapter: adapter({ fallback: 'index.html' }) }
 };
+
+export default config;
