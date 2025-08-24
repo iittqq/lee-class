@@ -1,4 +1,5 @@
 <script lang="ts">
+	import '../../app.css';
 	import WorkInProgress from '$lib/components/WorkInProgress.svelte';
 
 	let selectedSubject: string | null = null;

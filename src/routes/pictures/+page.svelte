@@ -1,5 +1,6 @@
 <script lang="ts">
 	import WorkInProgress from '$lib/components/WorkInProgress.svelte';
+	import '../../app.css';
 	import { goto } from '$app/navigation';
 
 	export let fallback = '/';

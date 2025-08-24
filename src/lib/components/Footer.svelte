@@ -1,3 +1,7 @@
+<script lang="ts">
+	import '../../app.css';
+</script>
+
 <h3 class="section-header">Contact Me:</h3>
 <div class="contact-section">
 	<a href="https://www.parentsquare.com/">Parent Square</a>
