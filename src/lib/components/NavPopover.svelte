@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { fade, fly, scale } from 'svelte/transition';
+	import { scale } from 'svelte/transition';
 
 	let open = false;
 	let buttonEl: HTMLButtonElement;
@@ -15,33 +15,32 @@
 
 	function toggle() {
 		open = !open;
-		// focus first link when opened
 		if (open) queueMicrotask(() => panelEl?.querySelector('a')?.focus());
 	}
 
-	// close on Escape
 	function onKeydown(e: KeyboardEvent) {
-		if (e.key === 'Escape' && open) {
+		if (!open) return;
+		if (e.key === 'Escape' || e.key === 'Esc') {
 			open = false;
 			buttonEl?.focus();
 		}
 	}
 
-	// click outside action
 	function clickOutside(node: HTMLElement) {
 		const onDocClick = (e: MouseEvent) => {
 			if (!open) return;
 			const t = e.target as Node;
-			if (!node.contains(t) && !buttonEl.contains(t)) {
-				open = false;
-			}
+			if (!node.contains(t) && !buttonEl.contains(t)) open = false;
 		};
 		document.addEventListener('mousedown', onDocClick);
 		return { destroy: () => document.removeEventListener('mousedown', onDocClick) };
 	}
 </script>
 
-<div class="popover" on:keydown={onKeydown}>
+<!-- listen globally; handler ignores keys when not open -->
+<svelte:window on:keydown={onKeydown} />
+
+<div class="popover">
 	<button
 		bind:this={buttonEl}
 		class="trigger"
@@ -50,7 +49,7 @@
 		aria-controls="nav-popover"
 		on:click={toggle}
 	>
-		☰ Menu
+		<img src="/menu.png" alt="menu" class="menu-icon" /> Menu
 	</button>
 
 	{#if open}
@@ -86,6 +85,12 @@
 		border: 1px solid hsl(0 0% 85%);
 		background: white;
 		cursor: pointer;
+		color: #000;
+	}
+
+	.menu-icon {
+		height: 10px;
+		width: 10px;
 	}
 
 	.panel {

@@ -77,7 +77,7 @@
 <style>
 	.home-header-container {
 		margin: auto;
-		width: 90vw;
+		width: 95vw;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -103,7 +103,7 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-		width: 90vw;
+		width: auto;
 		padding: 1rem;
 		@media (max-width: 768px) {
 			flex-direction: column;
@@ -115,26 +115,26 @@
 		flex-direction: row-reverse;
 		justify-content: space-between;
 		align-items: center;
-		width: 90vw;
+		width: auto;
 		padding: 1rem;
 		@media (max-width: 768px) {
 			flex-direction: column;
 		}
 	}
 	.details-row-text {
-		width: 40vw;
+		width: 45vw;
 		text-align: center;
 		@media (max-width: 768px) {
-			width: 90vw;
+			width: 95vw;
 		}
 	}
 	.image-container {
-		height: 50vh;
-		width: 40vw;
+		height: 450px;
+		width: 45vw;
 		overflow: hidden;
 		border-radius: 25px;
 		@media (max-width: 768px) {
-			width: 90vw;
+			width: 95vw;
 			height: 300px;
 		}
 	}
