@@ -113,7 +113,7 @@
 	}
 
 	.back-button {
-		position: fixed;
+		position: absolute;
 		left: 5rem;
 		top: 5rem;
 		background: none;
